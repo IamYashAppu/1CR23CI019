@@ -14,7 +14,6 @@ export default function App() {
     if (input === '') return;
     
     try {
-      // Using Function constructor for safe evaluation
       const evalResult = Function('"use strict"; return (' + input + ')')();
       setResult(evalResult.toString());
     } catch (error) {

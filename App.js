@@ -7,7 +7,7 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showResult, setShowResult] = useState(false);
-  const [answers, setAnswers] = useState([]); // To track user answers
+  const [answers, setAnswers] = useState([]); 
 
   const quizData = [
     {
@@ -72,7 +72,6 @@ export default function App() {
       return;
     }
 
-    // Save the user's answer
     const newAnswers = [...answers];
     newAnswers[currentQuestionIndex] = {
       question: quizData[currentQuestionIndex].question,
@@ -82,12 +81,10 @@ export default function App() {
     };
     setAnswers(newAnswers);
 
-    // Update score if answer is correct
     if (selectedOption === quizData[currentQuestionIndex].correctAnswer) {
       setScore(score + 1);
     }
 
-    // Move to the next question or show results
     if (currentQuestionIndex + 1 < quizData.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedOption(null);

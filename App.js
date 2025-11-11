@@ -21,7 +21,7 @@ const sampleRecipes = [
   },
   {
     id: '2',
-    title: 'Akki Roti',
+    title: 'Akki Roti or Rice Roti',
     image: akkiRotiImage,
     prepTime: '25 mins',
     difficulty: 'Easy',
